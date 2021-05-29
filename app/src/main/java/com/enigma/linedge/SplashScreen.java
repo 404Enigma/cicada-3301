@@ -1,11 +1,10 @@
 package com.enigma.linedge;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.pranavpandey.android.dynamic.toasts.DynamicToast;
 
@@ -48,7 +47,8 @@ public class SplashScreen extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-
+                startActivity(new Intent(SplashScreen.this, MainActivity.class));
+                finish();
             }
         }, 1000);
 

@@ -6,4 +6,9 @@ router.get("/", (req, res) => {
   res.render("pages/index");
 });
 
+router.get("/main", (req, res) => {
+  console.log("we love the earth");
+  res.render("pages/main");
+});
+
 module.exports = router;

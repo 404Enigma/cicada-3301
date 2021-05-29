@@ -28,7 +28,22 @@ function refreshGrid() {
 $(document).ready(function () {
   createGrid(16); //by defaults
 
-  $(".grid").mouseover(function () {
+  $(".grid").click(function () {
+    $(this).css("background-color", "red");
+  });
+
+  let drag = false;
+
+  document.addEventListener("mousedown", () => {
+    $(this).css("background-color", "red");
+    drag = false;
+  });
+  document.addEventListener("mousemove", () => {
+    $(this).css("background-color", "red");
+    drag = true;
+  });
+  document.addEventListener("mouseup", () => {
+    console.log(drag ? "drag" : "click");
     $(this).css("background-color", "red");
   });
 

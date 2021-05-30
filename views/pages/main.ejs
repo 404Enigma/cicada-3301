@@ -26,7 +26,14 @@
         <hr />
         <ul class="list-unstyled ps-0">
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true"> Home </button>
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#home-collapse"
+              aria-expanded="true"
+            >
+              Home
+            </button>
             <div class="collapse show" id="home-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li><a href="#" class="rounded">Overview</a></li>
@@ -36,7 +43,14 @@
             </div>
           </li>
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false"> Dashboard </button>
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#dashboard-collapse"
+              aria-expanded="false"
+            >
+              Route
+            </button>
             <div class="collapse" id="dashboard-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li><a href="#" class="rounded">Overview</a></li>
@@ -46,50 +60,36 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false"> Orders </button>
-            <div class="collapse" id="orders-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="rounded">New</a></li>
-                <li><a href="#" class="rounded">Processed</a></li>
-                <li><a href="#" class="rounded">Shipped</a></li>
-                <li><a href="#" class="rounded">Returned</a></li>
-              </ul>
-            </div>
-          </li>
+
           <li class="border-top my-3"></li>
-          <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false"> Account </button>
-            <div class="collapse" id="account-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="rounded">New...</a></li>
-                <li><a href="#" class="rounded">Profile</a></li>
-                <li><a href="#" class="rounded">Settings</a></li>
-                <li><a href="#" class="rounded">Sign out</a></li>
-              </ul>
-            </div>
-          </li>
         </ul>
       </div>
 
       <div class="b-example-divider"></div>
 
-      <div>
-        <form action="/save_address" method="POST">
-          <div class="mb-3">
-            <label for="input_address" class="form-label">Enter your Address</label>
-            <input type="text" class="form-control" id="input_address" aria-describedby="emailHelp" />
-          </div>
-
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-
       <% if(options){%>
-      <div id="coordinate_data" data-lat="<%= options.lat%>" data-lng="<%= options.lng%>" data-name="<%= options.name%>"></div>
+      <div
+        id="coordinate_data"
+        data-lat="<%= options.lat%>"
+        data-lng="<%= options.lng%>"
+        data-name="<%= options.name%>"
+      ></div>
 
       <% } %>
-      <div class="container" id="map"></div>
+
+      <div class="d-block mx-auto">
+        <div class="container mt-3" id="map"></div>
+        <div class="mt-3">
+          <form action="/save_address" method="POST">
+            <div class="mb-3">
+              <label for="input_address" class="form-label">Enter your Address</label>
+              <input type="text" class="form-control" id="input_address" aria-describedby="emailHelp" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
     </main>
 
     <script
@@ -99,7 +99,10 @@
     ></script>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcCOBjHXCD1IPhM62XJ0FUEd4gCSSZgM4&callback=myfunction&libraries=&v=weekly" async></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcCOBjHXCD1IPhM62XJ0FUEd4gCSSZgM4&callback=myfunction&libraries=&v=weekly"
+      async
+    ></script>
     <script src="js/main.js"></script>
   </body>
 </html>

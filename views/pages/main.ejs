@@ -12,6 +12,8 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
@@ -72,6 +74,21 @@
 
       <div class="b-example-divider"></div>
 
+      <div>
+        <form action="/save_address" method="POST">
+          <div class="mb-3">
+            <label for="input_address" class="form-label">Enter your Address</label>
+            <input type="text" class="form-control" id="input_address" aria-describedby="emailHelp" />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <% if(options){%>
+      <div id="coordinate_data" data-lat="<%= options.lat%>" data-lng="<%= options.lng%>" data-name="<%= options.name%>"></div>
+
+      <% } %>
       <div class="container" id="map"></div>
     </main>
 
@@ -82,7 +99,7 @@
     ></script>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcCOBjHXCD1IPhM62XJ0FUEd4gCSSZgM4&callback=initMap&libraries=&v=weekly" async></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcCOBjHXCD1IPhM62XJ0FUEd4gCSSZgM4&callback=myfunction&libraries=&v=weekly" async></script>
     <script src="js/main.js"></script>
   </body>
 </html>

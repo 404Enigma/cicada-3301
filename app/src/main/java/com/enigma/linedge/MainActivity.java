@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         webView = findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://www.google.com");
+        webView.loadUrl("https://linedge.herokuapp.com");
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);

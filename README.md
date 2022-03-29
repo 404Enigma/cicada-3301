@@ -24,7 +24,7 @@
 <div>
 &nbsp;
 <h2>Tagline</h2>
-<p>Linedge is a web platform that focuses on reducing the number of casualties and helping out people in case of a natural calamity.</p>
+<p>Linedge is a web platform and an android app that focuses on reducing the number of casualties and helping out people in case of a natural calamity.</p>
 </div>
 &nbsp;
 &nbsp;
